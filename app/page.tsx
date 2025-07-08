@@ -27,11 +27,11 @@ export default function Home() {
   const [hobbies, setHobbies] = useState<Hobby[]>(hobbiesPreset);
 
   useEffect(() => {
-    const defaultImageUrl = '/profile.jpg'
+    const defaultImageUrl = '/profile.jpeg'
     fetch(defaultImageUrl)
       .then((res) => res.blob())
       .then((blob) => {
-        const defaultFile = new File([blob], "profile.jpg", { type: blob.type })
+        const defaultFile = new File([blob], "profile.jpeg", { type: blob.type })
 
         setFile(defaultFile)
 
@@ -114,7 +114,7 @@ export default function Home() {
         const pdfHeight = (canvas.height * pdfWidth) / canvas.width 
 
         pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
-        pdf.save(`cv.pdf`)
+        pdf.save(`mon_cv.pdf`)
 
         const modal = document.getElementById('my_modal_3') as HTMLDialogElement
         if(modal){
@@ -143,8 +143,8 @@ export default function Home() {
           <div className="w-1/3 h-full p-10 bg-base-200 scrollable no-scrollbar ">
             <div className="mb-4 flex justify-between items-center">
               <h1 className="text-2xl font-bold italic">
-                CV
-                <span className="text-primary">Builder</span>
+                sama
+                <span className="text-primary">cv</span>
 
               </h1>
 
