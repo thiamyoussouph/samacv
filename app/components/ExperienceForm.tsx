@@ -93,7 +93,7 @@ const ExperienceForm: React.FC<Props> = ({ experience, setExperiences }) => {
 
             <button
                 onClick={handleAddExperience}
-                className='btn btn-primary mt-4'
+                className='btn btn-accent mt-4'
             >
                 Ajouter
                 <Plus className='w-4' />

@@ -91,7 +91,7 @@ const EducationForm: React.FC<Props> = ({ educations, setEducations }) => {
 
             <button
                 onClick={handleAddEducation}
-                className='btn btn-primary mt-4'
+                className='btn btn-accent mt-4'
             >
                 Ajouter
                 <Plus className='w-4' />

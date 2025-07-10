@@ -38,7 +38,7 @@ const SkillForm: React.FC<Props> = ({ skills, setSkills }) => {
 
       <button
         onClick={handleAddSkill}
-        className='btn btn-primary mt-4'
+        className='btn btn-accent mt-4'
       >
         Ajouter
         <Plus className='w-4' />

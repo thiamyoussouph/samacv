@@ -58,7 +58,7 @@ const PersonalDetailsForm: React.FC<Props> = ({ personalDetails, setPersonalDeta
         type="file"
         accept='image/*'
         onChange={handleFileChange}
-        className='file-input file-input-bordered w-full file-input-primary'
+        className='file-input file-input-bordered w-full file-input-accent'
       />
 
       <input

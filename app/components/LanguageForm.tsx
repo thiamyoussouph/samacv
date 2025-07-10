@@ -54,7 +54,7 @@ const LanguageForm: React.FC<Props> = ({ languages, setLanguages }) => {
 
             <button
                 onClick={handleAddLanguage}
-                className='btn btn-primary mt-4'
+                className='btn btn-accent mt-4'
             >
                 Ajouter
                 <Plus className='w-4' />

@@ -144,11 +144,11 @@ export default function Home() {
             <div className="mb-4 flex justify-between items-center">
               <h1 className="text-2xl font-bold italic">
                 sama
-                <span className="text-primary">cv</span>
+                <span className="text-accent">cv</span>
 
               </h1>
 
-              <button className="btn btn-primary" onClick={() => (document.getElementById('my_modal_3') as HTMLDialogElement).showModal()}>
+              <button className="btn btn-accent" onClick={() => (document.getElementById('my_modal_3') as HTMLDialogElement).showModal()}>
                 Prévisualiser
                 <Eye className="w-4" />
               </button>
@@ -157,10 +157,10 @@ export default function Home() {
             <div className="flex  flex-col gap-6 rounded-lg">
 
               <div className="flex justify-between items-center">
-                <h1 className="badge badge-primary badge-outline">Qui êtes-vous ?</h1>
+                <h1 className="badge badge-accent badge-outline">Qui êtes-vous ?</h1>
                 <button
                   onClick={handleResetPersonalDetails}
-                  className="btn btn-primary btn-sm">
+                  className="btn btn-accent btn-sm">
                   <RotateCw className="w-4" />
                 </button>
               </div>
@@ -172,10 +172,10 @@ export default function Home() {
               />
 
               <div className="flex justify-between items-center">
-                <h1 className="badge badge-primary badge-outline">Expériences</h1>
+                <h1 className="badge badge-accent badge-outline">Expériences</h1>
                 <button
                   onClick={handleResetExperiences}
-                  className="btn btn-primary btn-sm">
+                  className="btn btn-accent btn-sm">
                   <RotateCw className="w-4" />
                 </button>
               </div>
@@ -187,10 +187,10 @@ export default function Home() {
 
 
               <div className="flex justify-between items-center">
-                <h1 className="badge badge-primary badge-outline">Éducations</h1>
+                <h1 className="badge badge-accent badge-outline">Éducations</h1>
                 <button
                   onClick={handleResetEducations}
-                  className="btn btn-primary btn-sm">
+                  className="btn btn-accent btn-sm">
                   <RotateCw className="w-4" />
                 </button>
               </div>
@@ -201,10 +201,10 @@ export default function Home() {
               />
 
               <div className="flex justify-between items-center">
-                <h1 className="badge badge-primary badge-outline">Langues</h1>
+                <h1 className="badge badge-accent badge-outline">Langues</h1>
                 <button
                   onClick={handleResetLanguages}
-                  className="btn btn-primary btn-sm">
+                  className="btn btn-accent btn-sm">
                   <RotateCw className="w-4" />
                 </button>
               </div>
@@ -218,10 +218,10 @@ export default function Home() {
 
                 <div className="w-1/2">
                   <div className="flex justify-between items-center">
-                    <h1 className="badge badge-primary badge-outline">Compétences</h1>
+                    <h1 className="badge badge-accent badge-outline">Compétences</h1>
                     <button
                       onClick={handleResetSkills}
-                      className="btn btn-primary btn-sm">
+                      className="btn btn-accent btn-sm">
                       <RotateCw className="w-4" />
                     </button>
                   </div>
@@ -230,10 +230,10 @@ export default function Home() {
 
                 <div className="ml-4 w-1/2">
                   <div className="flex justify-between items-center">
-                    <h1 className="badge badge-primary badge-outline">Loisirs</h1>
+                    <h1 className="badge badge-accent badge-outline">Loisirs</h1>
                     <button
                       onClick={handleResetHobbies}
-                      className="btn btn-primary btn-sm">
+                      className="btn btn-accent btn-sm">
                       <RotateCw className="w-4" />
                     </button>
                   </div>
@@ -259,8 +259,8 @@ export default function Home() {
                 max={200}
                 value={zoom}
                 onChange={(e) => setZoom(Number(e.target.value))}
-                className="range range-xs range-primary" />
-              <p className="ml-4 text-sm text-primary">{zoom}%</p>
+                className="range range-xs range-accent" />
+              <p className="ml-4 text-sm text-accent">{zoom}%</p>
             </div>
 
             <select
@@ -310,7 +310,7 @@ export default function Home() {
 
             <div className="mt-5">
               <div className="flex justify-end mb-5">
-                <button onClick={handleDownloadPdf} className="btn btn-primary">
+                <button onClick={handleDownloadPdf} className="btn btn-accent">
                   Télécharger
                   <Save className='w-4' />
                 </button>
