@@ -22,3 +22,15 @@
     -ms-overflow-style: none; 
     scrollbar-width: none; 
 }
+@media print {
+  .page-break {
+    page-break-before: always;
+  }
+
+  * {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+
