@@ -40,8 +40,8 @@ const getStarRating = (proficiency: string) => {
   );
 };
 
-const TemplateCreative = forwardRef<HTMLDivElement, Props>(
-  ({ personalDetails, file, theme, experiences, educations, languages, skills, hobbies, download }, ref) => {
+const TemplateD = forwardRef<HTMLDivElement, Props>(
+  ({ personalDetails, file, theme, experiences, educations, languages, skills, hobbies }, ref) => {
     return (
       <div ref={ref} data-theme={theme} className="bg-base-100 text-base-content">
         {/* Page 1 */}
@@ -117,7 +117,8 @@ const TemplateCreative = forwardRef<HTMLDivElement, Props>(
             </div>
 
             <div className="relative z-10 mt-8">
-              <h2 className="text-lg font-bold mb-3 text-center">Centres d'intérêt</h2>
+              <h3 className="text-lg font-bold text-primary border-b border-primary/30 pb-2 mb-3">Centres d&rsquo;intérêt</h3>
+
               <div className="flex flex-wrap justify-center gap-2">
                 {hobbies.map((hobby, index) => (
                   <div key={index} className="bg-primary-content/20 px-3 py-1 rounded-full text-sm">
@@ -133,7 +134,7 @@ const TemplateCreative = forwardRef<HTMLDivElement, Props>(
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-bl-full"></div>
 
             <div className="relative z-10 mb-10">
-              <div className="text-5xl text-primary opacity-20 absolute -left-2 -top-5">"</div>
+              <div className="text-5xl text-primary opacity-20 absolute -left-2 -top-5"></div>
               <p className="text-sm italic pl-8 border-l-2 border-primary">
                 {personalDetails.description}
               </p>
@@ -195,5 +196,6 @@ const TemplateCreative = forwardRef<HTMLDivElement, Props>(
   }
 );
 
-TemplateCreative.displayName = "TemplateCreative";
-export default TemplateCreative;
+TemplateD.displayName = 'TemplateD';
+
+export default TemplateD;

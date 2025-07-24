@@ -46,7 +46,7 @@ const getStarRating = (proficiency: string) => {
   );
 };
 
-const TemplateElegance = forwardRef<HTMLDivElement, Props>(({
+const TemplateC = forwardRef<HTMLDivElement, Props>(({
   personalDetails,
   file,
   theme,
@@ -149,7 +149,8 @@ const TemplateElegance = forwardRef<HTMLDivElement, Props>(({
 
           {/* Centres d'intérêt */}
           <div>
-            <h3 className="text-lg font-bold text-primary border-b border-primary/30 pb-2 mb-3">Centres d'intérêt</h3>
+           <h3 className="text-lg font-bold text-primary border-b border-primary/30 pb-2 mb-3">Centres d&rsquo;intérêt</h3>
+
             <div className="flex flex-wrap gap-2">
               {hobbies.map((hobby, i) => (
                 <div key={i} className="bg-primary/10 rounded-full px-3 py-1 text-sm">
@@ -213,5 +214,6 @@ const TemplateElegance = forwardRef<HTMLDivElement, Props>(({
   );
 });
 
-TemplateElegance.displayName = "TemplateElegance";
-export default TemplateElegance;
+TemplateC.displayName = 'TemplateC';
+
+export default TemplateC;

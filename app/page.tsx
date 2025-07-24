@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import html2canvas from "html2canvas-pro";
 import jsPDF from "jspdf";
 import confetti from "canvas-confetti";
-import html2pdf from "html2pdf.js";
+
 import PersonalDetailsForm from "./components/PersonalDetailsForm";
 import ExperienceForm from "./components/ExperienceForm";
 import EducationForm from "./components/EducationForm";
@@ -39,6 +39,7 @@ import {
 } from "@/presets";
 
 export default function Home() {
+  
   const [personalDetails, setPersonalDetails] = useState<PersonalDetails>(personalDetailsPreset);
   const [file, setFile] = useState<File | null>(null);
   const [theme, setTheme] = useState<string>("cupcake");
@@ -48,7 +49,8 @@ export default function Home() {
   const [languages, setLanguages] = useState<Language[]>(languagesPreset);
   const [skills, setSkills] = useState<Skill[]>(skillsPreset);
   const [hobbies, setHobbies] = useState<Hobby[]>(hobbiesPreset);
-  const [extraPages, setExtraPages] = useState<number>(0);
+const [extraPages, setExtraPages] = useState(0);
+
 
   const [selectedTemplate, setSelectedTemplate] = useState<'A' | 'B' | 'C' | 'D'>('A');
 
@@ -233,9 +235,14 @@ const handleDownloadPdf = async () => {
               <option value="C">Modèle Simple</option>
               <option value="D">Modèle Élégant</option>
             </select>
-            <div className="flex justify-center items-center" style={{ transform: `scale(${zoom / 200})` }}>
-              {renderTemplate()}
-            </div>
+            <div className="flex flex-col justify-center items-center" style={{ transform: `scale(${zoom / 200})` }}>
+  {renderTemplate()}
+  {Array.from({ length: extraPages }).map((_, index) => (
+    <div key={index} className="mt-8">
+      {renderTemplate()}
+    </div>
+  ))}
+</div>
           </div>
         </section>
 
